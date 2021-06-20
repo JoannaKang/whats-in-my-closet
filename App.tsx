@@ -1,12 +1,25 @@
 import React, { Component, ReactNode } from 'react';
 import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
 
-export default class App extends React.Component {
+interface WeatherInfo {
+  city: string;
+  description:string;
+  main: string;
+}
+
+interface WeatherProps {
+
+}
+
+export default class App extends React.Component<WeatherProps, WeatherInfo> {
   
-  state = {
-    city: '',
-    description: '',
-    main: ''
+  constructor(props:WeatherProps) {
+    super(props);
+    this.state = {
+      city: '',
+      description: '',
+      main: ''
+    };
   }
 
   componentDidMount () {
