@@ -1,15 +1,15 @@
 import React, { Component, ReactNode } from 'react';
 import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
 
+import CityBox from './components/Hello';
+
 interface WeatherInfo {
   city: string;
   description:string;
   main: string;
 }
 
-interface WeatherProps {
-
-}
+interface WeatherProps {}
 
 export default class App extends React.Component<WeatherProps, WeatherInfo> {
   
@@ -37,9 +37,7 @@ export default class App extends React.Component<WeatherProps, WeatherInfo> {
     return (
       <SafeAreaView>
         <View style={styles.container}>
-          <Text>{this.state.city}</Text>
-          <Text>{this.state.description}</Text>
-          <Text>{this.state.main}</Text>
+          <CityBox cityProps={this.state} />
         </View>
       </SafeAreaView>
     )
