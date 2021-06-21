@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import styled from 'styled-components/native'
+
 interface WeatherInfo {
     city : string;
     description: string;
